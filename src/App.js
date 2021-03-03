@@ -1,11 +1,12 @@
 import { useRoutes, A } from "hookrouter";
-import { Empty, Layout, Menu } from "antd";
+import { Layout, Menu } from "antd";
 import {} from "@ant-design/icons";
 
 import "./App.less";
 
 import routes from "./router";
 import { Suspense } from "react";
+import Home from "./components/Home/Home";
 
 function App() {
   const routeResult = useRoutes(routes);
@@ -14,7 +15,7 @@ function App() {
   return (
     <Layout>
       <Header className="header">
-        <div className="logo">LOGO</div>
+        <div className="App-logo">Star Wars Information</div>
       </Header>
       <Layout>
         <Sider width={200} className="site-layout-background">
@@ -44,7 +45,7 @@ function App() {
             </Menu.Item>
             <Menu.Item key="7">
               <A href="/vehicles">Vehicles</A>
-            </Menu.Item>            
+            </Menu.Item>
           </Menu>
         </Sider>
 
@@ -58,7 +59,7 @@ function App() {
             }}
           >
             <Suspense fallback="<p>loading ....</p>">
-              {routeResult || <Empty />}
+              {routeResult || <Home />}
             </Suspense>
           </Content>
         </Layout>

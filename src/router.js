@@ -12,6 +12,7 @@ import Starships from "./components/Starships/Starships";
 import StartshipDetails from "./components/StarshipDetails/StarshipDetails.lazy";
 import Vehicles from "./components/Vehicles/Vehicles";
 import VehicleDetails from "./components/VehicleDetails/VehicleDetails";
+import Home from "./components/Home/Home.lazy";
 
 const routes = {
   "/films": () => <Films />,
@@ -26,6 +27,8 @@ const routes = {
   "/starships/:id": ({ id }) => <StartshipDetails id={id} />,
   "/vehicles": () => <Vehicles />,
   "/vehicles/:id": ({ id }) => <VehicleDetails id={id} />,
+
+  "/": () => <Home />,
 };
 
 export default routes;
