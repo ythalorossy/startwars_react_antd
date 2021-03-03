@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://ythalorossy.github.io/startwars_react_antd",
   "dependencies": {
-    "@craco/craco": "^6.1.1",
+    "@craco/craco": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
